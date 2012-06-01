@@ -1,0 +1,28 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Yanwuhuan</title>
+ <link href="http://blog.yanwuhuan.com/entries.xml" rel="self"/>
+ <link href="http://blog.yanwuhuan.com/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://blog.yanwuhuan.com/</id>
+ <author>
+   <name>Yanwuhuan</name>
+   <email>yanwuhuan@gmail.com</email>
+ </author>
+
+ {% for post in site.posts limit:50 %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://blog.yanwuhuan.com{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://blog.yanwuhuan.com{{ post.id }}</id>
+   <content type="html">&lt;p&gt;Please subscribe my new blog posts &lt;a href="http://feeds.feedburner.com/yanwuhuan"&gt;http://feeds.feedburner.com/yanwuhuan&lt;/a&gt;&lt;/p&gt;</content>
+ </entry>
+ {% endfor %}
+
+</feed>
+
