@@ -1,5 +1,8 @@
-# 基于apache的subversion与bugzilla组合的中文问题 #
-
+---
+layout: post
+title: 基于apache的subversion与bugzilla组合的中文问题
+categories: SCM
+---
 
 这个折腾了半天时间，记录下来
 
