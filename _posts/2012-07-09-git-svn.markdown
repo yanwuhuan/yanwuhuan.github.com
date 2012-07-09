@@ -1,0 +1,15 @@
+---
+layout: post
+title: 仅同步一部分SVN
+categories: SCM
+---
+
+将svn上指定版本以下的提供过来，那么，首先同步
+<code>
+   git svn --revision BASE:NNN fetch
+</code>
+
+再做一个本地的rebase——类似git merge
+<code>
+    git svn rebase -l
+</code>
